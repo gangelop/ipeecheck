@@ -11,20 +11,21 @@ EMAIL=name@host.com
 #checks if file exists
 if [ -f "$ADDR_HST_FILE" ]
 then
-    echo "File exists"
+    echo "Address history file exists"
 else
-    echo "File doesn't exist"
-    echo "Creating file..." $ADDR_HST_FILE
+    echo "Address history file doesn't exist"
+    echo "Creating file" $ADDR_HST_FILE
     touch $ADDR_HST_FILE
 fi
 
-CURRENT_ADDR=$(curl $SERVER)
+echo "Checking current ip address..."
+CURRENT_ADDR=$(curl $SERVER 2>/dev/null)
 PREVIOUS_ADDR=$(tail -n 1 "$ADDR_HST_FILE")
 
 #checks if address has changed since previous execution
 if [ "$CURRENT_ADDR" == "$PREVIOUS_ADDR"  ]
 then
-    echo "Your ip address hasn't changed"
+    echo "Your ip address hasn't changed."
     exit 0
 else
     echo "Your ip address has changed."
