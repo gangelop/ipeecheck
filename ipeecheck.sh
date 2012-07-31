@@ -5,7 +5,7 @@ set -o nounset
 set -o errexit
 
 SERVER="http://icanhazip.com"
-ADDR_HST_FILE="$HOME/.address_history"
+ADDR_HST_FILE="$HOME/.ipeecheck_address_history"
 EMAIL=name@host.com
 
 #checks if file exists
