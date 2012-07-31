@@ -11,9 +11,9 @@ EMAIL=name@host.com
 #checks if file exists
 if [ -f "$ADDR_HST_FILE" ]
 then
-    echo "Address history file exists"
+    echo "Address history file exists."
 else
-    echo "Address history file doesn't exist"
+    echo "Address history file doesn't exist."
     echo "Creating file" $ADDR_HST_FILE
     touch $ADDR_HST_FILE
 fi
