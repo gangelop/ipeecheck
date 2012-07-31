@@ -24,14 +24,14 @@ PREVIOUS_ADDR=$(tail -n 1 "$ADDR_HST_FILE")
 #checks if address has changed since previous execution
 if [ "$CURRENT_ADDR" == "$PREVIOUS_ADDR"  ]
 then
-    echo "No changes"
+    echo "Your ip address hasn't changed"
     exit 0
 else
-    echo "IP addr has changed."
-    echo "Storing new IP addr in $ADDR_HST_FILE"
+    echo "Your ip address has changed."
+    echo "Storing new ip address in $ADDR_HST_FILE"
     echo $CURRENT_ADDR >> "$ADDR_HST_FILE"
 
-    echo -e "Your IP address has changed.\n\
-Your new IP address is:\n$CURRENT_ADDR"\
+    echo -e "Your ip address has changed.\n\
+Your new ip address is:\n$CURRENT_ADDR"\
 | mailx -v -s "[IPEECHECK] Your ip address has changed" $EMAIL
 fi
