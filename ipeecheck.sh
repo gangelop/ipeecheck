@@ -15,7 +15,7 @@ then
     echo "Address history file exists."
 else
     echo "Address history file doesn't exist."
-    echo "Creating file" $ADDR_HST_FILE
+    echo "Creating file $ADDR_HST_FILE"
     touch $ADDR_HST_FILE
 fi
 
