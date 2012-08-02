@@ -8,7 +8,8 @@ SERVER="http://icanhazip.com"
 ADDR_HST_FILE="$HOME/.ipeecheck_address_history"
 EMAIL=name@host.com
 
-#checks if file exists
+#checks if address history file exists.
+#if not, it creates it.
 if [ -f "$ADDR_HST_FILE" ]
 then
     echo "Address history file exists"
@@ -18,11 +19,15 @@ else
     touch $ADDR_HST_FILE
 fi
 
+#gets the current addr from the specified server and
+#gets the latest addr from the address history file.
 echo "Checking current ip address..."
 CURRENT_ADDR=$(curl $SERVER 2>/dev/null)
 PREVIOUS_ADDR=$(tail -n 1 "$ADDR_HST_FILE")
 
 #checks if address has changed since previous execution
+#if it hasn't changed, it does nothing.
+#else, it appends it to the history file and sends an e-mail
 if [ "$CURRENT_ADDR" == "$PREVIOUS_ADDR"  ]
 then
     echo "Your ip address hasn't changed."
