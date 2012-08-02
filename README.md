@@ -11,7 +11,7 @@ usage
 ---------
 
 The intended usage of this script is scheduling it with cron to run every few minutes. 
-Before running, you need to edit three variables: 
+Before running, you need to *edit three variables*: 
 
 **SERVER** = The webpage you will be using to tell you your ip address. This should be a webpage that returns a string which is your ip address. Two services that do this are icanhazip.com and ifconfig.me, but unless you don't run this frequently, I recomend implementing this on a server you own.
 
