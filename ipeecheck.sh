@@ -21,6 +21,7 @@ fi
 
 #gets the current addr from the specified server and
 #gets the latest addr from the address history file.
+#stores both addresses in variables
 echo "Checking current ip address..."
 CURRENT_ADDR=$(curl $SERVER 2>/dev/null)
 PREVIOUS_ADDR=$(tail -n 1 "$ADDR_HST_FILE")
