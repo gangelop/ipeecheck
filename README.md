@@ -5,9 +5,15 @@ A bash script that sends you an e-mail containing your public IP when it changes
 
 This script requires:
 curl
-tail
 mailx
 
-You will also need to configure mailx with an e-mail account and a SMTP server.
+usage
+=========
 
-WARNING: If you don't use your own server for the checking and you use some service like icanhazip.com or ifconfig.me make sure you play nice and don't abuse it, especially if you are going to use this script in a cron job. Otherwise, host your own server and have a dynamic page that returns a line with the visitor's address (easy to do with php).
+The intended usage of this script is scheduling it with cron to run every few minutes. 
+Before running, you need to edit three variables: 
+SERVER = The webpage you will be using to tell you your ip address. This should be a webpage that returns a string which is your ip address. Two services that do this are icanhazip.com and ifconfig.me, but unless you don't run this frequently, I recomend implementing this on a server you own.
+ADDR_HST_FILE = the file that will be used to store ip addresses for future reference. The default is a hidden file in your home directory.
+EMAIL = The e-mail address at which you want to receive the notifications.
+
+Finally, you will need to configure mailx which is used to send the notifications. This is beyond the scope of this README. You're on your own here (you and a search engine).
