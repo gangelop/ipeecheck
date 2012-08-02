@@ -23,7 +23,7 @@ fi
 #gets the latest addr from the address history file.
 #stores both addresses in variables
 echo "Checking current ip address..."
-CURRENT_ADDR=$(curl $SERVER 2>/dev/null)
+CURRENT_ADDR=$(curl --silent $SERVER)
 PREVIOUS_ADDR=$(tail -n 1 "$ADDR_HST_FILE")
 
 #checks if address has changed since previous execution
