@@ -29,7 +29,7 @@ PREVIOUS_ADDR=$(tail -n 1 "$ADDR_HST_FILE")
 #checks if address has changed since previous execution
 #if it hasn't changed, it does nothing.
 #else, it appends it to the history file and sends an e-mail
-if [ "$CURRENT_ADDR" == "$PREVIOUS_ADDR"  ]
+if [ "$CURRENT_ADDR" = "$PREVIOUS_ADDR"  ]
 then
     echo "Your ip address hasn't changed."
     exit 0
