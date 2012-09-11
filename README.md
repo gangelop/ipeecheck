@@ -1,4 +1,4 @@
-ipsee
+IpSwitchee
 =========
 
 Project is a fork of the ipeecheck script. All credit for project base code goes to lathan. The readme instructions for setting up the original script are included below.
