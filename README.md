@@ -1,6 +1,12 @@
-ipeecheck
+ipsee
 =========
 
+Project is a fork of the ipeecheck script. All credit for project base code goes to lathan. The readme instructions for setting up the original script is included below.
+
+
+---------
+ORIGINAL
+---------
 A bash script that sends you an e-mail containing your public IP when it changes.
 
 This script requires:
