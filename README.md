@@ -4,14 +4,13 @@ IpSwitchee
 Project is a fork of the ipeecheck script. All credit for project base code goes to lathan. The readme instructions for setting up the original script are included below.
 
 Changes:
-Removed curl dependency
-Add desktop notification support with notify-send
-  - Including desktop notifications from remote machines via SSH
+* Removed curl dependency
+* Added desktop notification support with notify-send [Including desktop notifications from remote machines via SSH]
 
 Script requires:
-mailx [for mail sending]
-notify-send [for desktop notifications]
-ssh w/key login enabled [for desktop notification from remote machine]
+- mailx [for mail sending]
+- notify-send [for desktop notifications]
+- ssh w/key login enabled [for desktop notification from remote machine]
 
 usage of changes
 ---------
