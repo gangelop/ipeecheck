@@ -7,8 +7,8 @@ set -o errexit
 SERVER="http://icanhazip.com"
 ADDR_HST_FILE="$HOME/.ipeecheck_address_history"
 EMAIL=name@host.com
-ENABLE_DESKTOP_NOTIFICATION=$(false)
-REMOTE_DESKTOP_NOTIFICATION=$(false)
+ENABLE_DESKTOP_NOTIFICATION=false
+REMOTE_DESKTOP_NOTIFICATION=false
 REMOTE_NOTIFICATON_IP=192.168.1.X
 DESKTOP_NOTIFICATION_DISPLAY=:0
 
@@ -47,11 +47,11 @@ Your new ip address is:\n$CURRENT_ADDR"\
 | mailx -v -s "[IPEECHECK] Your ip address has changed" "$EMAIL"
     if $ENABLE_DESKTOP_NOTIFICATION;
       then
-	if $REMOTE_DESKTOP_NOTIFICATION;
-	  then
-	    ssh $REMOTE_NOTIFICATON_IP "DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY notify-send \"ipeecheck\" \"Your new public IP is:\n$CURRENT_ADDR\""
-	  else
-	    DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY notify-send "ipeecheck" "Your new public IP is:\n$CURRENT_ADDR"
-	fi
+        if $REMOTE_DESKTOP_NOTIFICATION;
+          then
+            ssh $REMOTE_NOTIFICATON_IP "DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY notify-send \"ipeecheck\" \"Your new public IP is:\n$CURRENT_ADDR\""
+          else
+            DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY notify-send "ipeecheck" "Your new public IP is:\n$CURRENT_ADDR"
+        fi
     fi
 fi
