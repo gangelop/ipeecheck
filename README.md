@@ -29,7 +29,7 @@ The following variables need to be set to enable desktop notifications.
 
 * **LOCAL_DESKTOP_NOTIFICATION** = Default is `false`. Set to `true` to enable notifications on the local machine.
 
-* **REMOTE_DESKTOP_NOTIFICATION** = Default is `false`. Set to `true` to send notifications to a remote machine. Feature requires SSH daemon to be enabled on target machine, with target machine setup to accept key-based login from host machine. If you schedule this with cron, the secret-key needs to be passwordless. 
+* **REMOTE_DESKTOP_NOTIFICATION** = Default is `false`. Set to `true` to send notifications to a remote machine. Feature requires SSH daemon to be enabled on target machine, with target machine setup to accept key-based login from host machine. KNOWN ISSUE: Haven't gotten this to work with cron.
 
 * **REMOTE_NOTIFICATION_IP** = IP address of remote target machine
 
