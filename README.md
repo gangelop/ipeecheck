@@ -27,9 +27,9 @@ Finally, you will need to configure mailx which is used to send the notification
 
 The following variables need to be set to enable desktop notifications.
 
-* **ENABLE_DESKTOP_NOTIFICATION** = While true: enable receipt of desktop notifications when IP changes. While false: desktop notification is disabled
+* **LOCAL_DESKTOP_NOTIFICATION** = Default is `false`. Set to `true` to enable notifications on the local machine.
 
-* **REMOTE_DESKTOP_NOTIFICATION** = Requires desktop notification to be anabled. When true: sends desktop notification to remote machine. When false: sends desktop notification to local machine. Feature requires SSH daemon to be enabled on target machine, with target machine setup to accept key-based login from host machine.
+* **REMOTE_DESKTOP_NOTIFICATION** = Default is `false`. Set to `true` to send notifications to a remote machine. Feature requires SSH daemon to be enabled on target machine, with target machine setup to accept key-based login from host machine. If you schedule this with cron, the secret-key needs to be passwordless. 
 
 * **REMOTE_NOTIFICATION_IP** = IP address of remote target machine
 
