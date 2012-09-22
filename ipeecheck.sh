@@ -49,9 +49,11 @@ Your new ip address is:\n$CURRENT_ADDR"\
       then
         if $REMOTE_DESKTOP_NOTIFICATION
           then
-            ssh $REMOTE_NOTIFICATON_IP "DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY notify-send \"ipeecheck\" \"Your new public IP is:\n$CURRENT_ADDR\""
+            ssh $REMOTE_NOTIFICATON_IP "DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY \
+            notify-send \"ipeecheck\" \"Your new public IP is:\n$CURRENT_ADDR\""
           else
-            DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY notify-send "ipeecheck" "Your new public IP is:\n$CURRENT_ADDR"
+            DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY \
+            notify-send "ipeecheck" "Your new public IP is:\n$CURRENT_ADDR"
         fi
     fi
 fi
