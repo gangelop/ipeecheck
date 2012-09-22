@@ -1,7 +1,8 @@
 ipeecheck
 =========
 
-A bash script that sends you an e-mail containing your public IP when it changes.
+A bash script that sends you an e-mail containing your public IP when it changes,
+with optional support for desktop notifications.
 
 This script requires:
 - mailx
@@ -23,6 +24,8 @@ Before running, you need to *edit three variables*:
 * **EMAIL** = The e-mail address at which you want to receive the notifications.
 
 Finally, you will need to configure mailx which is used to send the notifications. This is beyond the scope of this README. You're on your own here (you and a search engine).
+
+The following variables need to be set to enable desktop notifications.
 
 * **ENABLE_DESKTOP_NOTIFICATION** = While true: enable receipt of desktop notifications when IP changes. While false: desktop notification is disabled
 
