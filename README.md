@@ -5,9 +5,9 @@ A bash script that sends you an e-mail containing your public IP when it changes
 
 This script requires:
 - mailx
-- libnotify [for desktop notifications]
 
 Optional dependencies:
+- libnotify [for desktop notifications]
 - ssh w/key login enabled [for desktop notifications from remote machine]
 
 usage
