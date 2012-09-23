@@ -11,6 +11,8 @@ Optional dependencies:
 - libnotify (for desktop notifications)
 - ssh w/key login enabled (for desktop notifications from remote machine)
 
+This script is licensed under the MIT a.k.a. do-whatever-you-want-with-this-but-don't-sue-me license
+
 usage
 ---------
 
