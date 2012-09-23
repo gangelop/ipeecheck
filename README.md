@@ -8,8 +8,8 @@ This script requires:
 - mailx
 
 Optional dependencies:
-- libnotify [for desktop notifications]
-- ssh w/key login enabled [for desktop notifications from remote machine]
+- libnotify (for desktop notifications)
+- ssh w/key login enabled (for desktop notifications from remote machine)
 
 usage
 ---------
