@@ -45,6 +45,7 @@ else
     echo -e "Your ip address for host $HOSTNAME has changed.\n\
 Your new ip address is:\n$CURRENT_ADDR"\
 | mailx -v -s "[IPEECHECK] Your ip address has changed" "$EMAIL"
+
 #Sends desktop notifications if enabled
     if $LOCAL_DESKTOP_NOTIFICATION
     then
