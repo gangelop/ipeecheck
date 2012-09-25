@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#exits if there is an unbound variable or an error
+#exits if there is an unset variable or an error
 set -o nounset
 set -o errexit
 
