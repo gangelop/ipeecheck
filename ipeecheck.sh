@@ -4,7 +4,7 @@
 set -o nounset
 set -o errexit
 
-SERVER="http://icanhazip.com"
+SERVER="http://api.exip.org/?call=ip"
 ADDR_HST_FILE="$HOME/.ipeecheck_address_history"
 EMAIL=name@host.com
 LOCAL_DESKTOP_NOTIFICATION=false
