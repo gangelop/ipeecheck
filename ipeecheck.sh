@@ -37,7 +37,7 @@ if [ "$CURRENT_ADDR" = "$PREVIOUS_ADDR"  ]
 then
     exit 0
 else
-    echo "Your ip address has changed."
+    echo "Your ip address has changed to: $CURRENT_ADDR"
     echo "Storing new ip address in $ADDR_HST_FILE"
     echo "$CURRENT_ADDR" >> "$ADDR_HST_FILE"
 
