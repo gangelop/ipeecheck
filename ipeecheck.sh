@@ -4,6 +4,8 @@
 set -o nounset
 set -o errexit
 
+# Configure me!
+########################################
 SERVER="http://api.exip.org/?call=ip"
 ADDR_HST_FILE="$HOME/.ipeecheck_address_history"
 EMAIL=name@host.com
@@ -11,6 +13,7 @@ LOCAL_DESKTOP_NOTIFICATION=false
 REMOTE_DESKTOP_NOTIFICATION=false
 REMOTE_NOTIFICATON_IP=192.168.1.X
 DESKTOP_NOTIFICATION_DISPLAY=:0
+########################################
 
 #checks if address history file exists.
 #if not, it creates it.
