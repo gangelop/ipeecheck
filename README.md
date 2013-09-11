@@ -19,8 +19,8 @@ usage
 The intended usage of this script is scheduling it with cron to run every few minutes. 
 Before running, you need to *edit three variables*:
 
-* **SERVER** = The webpage you will be using to tell you your ip address. This should be a webpage that returns a string which is your ip address. [This website](http://www.exip.org/) (which I'm not affiliated with) does this. I have used it as the default `SERVER`. 
-If you have control of your own webserver you can very easily do this in PHP with `echo $_SERVER["REMOTE_ADDR"];`.
+* **SERVER** = The server you will be using to tell you your ip address. This should return a string which is your ip address. An example is http://www.usermod.net/api/ip which is hosted by me and is the default
+You can very easily do this in PHP with `echo $_SERVER["REMOTE_ADDR"];`.
 
 * **ADDR_HST_FILE**= the file that will be used to store ip addresses for future reference. The default is a hidden file in your home directory.
 

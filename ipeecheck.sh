@@ -6,7 +6,7 @@ set -o errexit
 
 # Configure me!
 ########################################
-SERVER="http://api.exip.org/?call=ip"
+SERVER="http://www.usermod.net/api/ip"
 ADDR_HST_FILE="$HOME/.ipeecheck_address_history"
 EMAIL=name@host.com
 LOCAL_DESKTOP_NOTIFICATION=false
