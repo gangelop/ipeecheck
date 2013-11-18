@@ -15,14 +15,8 @@ REMOTE_NOTIFICATON_IP=192.168.1.X
 DESKTOP_NOTIFICATION_DISPLAY=:0
 ########################################
 
-#checks if address history file exists.
-#if not, it creates it.
-if [ ! -f "$ADDR_HST_FILE" ]
-then
-    echo "Address history file doesn't exist."
-    echo "Creating file "$ADDR_HST_FILE""
-    touch "$ADDR_HST_FILE"
-fi
+# if address history file doesn't exist, it creates it
+[ -f "$ADDR_HST_FILE" ] || touch "$ADDR_HST_FILE"
 
 #gets the current addr from the specified server and
 #gets the latest addr from the address history file.
