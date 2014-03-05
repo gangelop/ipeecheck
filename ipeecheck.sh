@@ -7,7 +7,7 @@ set -o errexit
 # Configure me!
 ########################################
 SERVER="http://www.usermod.net/api/ip"
-ADDR_HST_FILE="$HOME/.ipeecheck_address_history"
+ADDR_HST_FILE="$HOME/.config/ipeecheck_address_history"
 EMAIL=name@host.com
 LOCAL_DESKTOP_NOTIFICATION=false
 REMOTE_DESKTOP_NOTIFICATION=false
