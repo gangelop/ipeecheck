@@ -42,12 +42,12 @@ Your new ip address is:\n$CURRENT_ADDR"\
     if $LOCAL_DESKTOP_NOTIFICATION
     then
         DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY \
-        notify-send "ipeecheck" "Your new public IP is:\n$CURRENT_ADDR"
+        notify-send "ipeecheck" "Your new public address is:\n$CURRENT_ADDR"
     fi
 
     if $REMOTE_DESKTOP_NOTIFICATION
     then
         ssh $REMOTE_NOTIFICATON_IP "DISPLAY=$DESKTOP_NOTIFICATION_DISPLAY \
-        notify-send \"ipeecheck\" \"Your new public IP is:\n$CURRENT_ADDR\""
+        notify-send \"ipeecheck\" \"Your new public address is:\n$CURRENT_ADDR\""
     fi
 fi
