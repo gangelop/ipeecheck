@@ -9,7 +9,7 @@ set -o errexit
 SERVER="http://www.usermod.net/api/ip"
 ADDR_HST_FILE="$HOME/.config/ipeecheck_address_history"
 EMAIL=name@host.com
-LOCAL_DESKTOP_NOTIFICATION=false
+LOCAL_DESKTOP_NOTIFICATION=true
 REMOTE_DESKTOP_NOTIFICATION=false
 REMOTE_NOTIFICATON_IP=192.168.1.X
 DESKTOP_NOTIFICATION_DISPLAY=:0
